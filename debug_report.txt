@@ -1,0 +1,10 @@
+# Báo cáo Phân tích và Sửa lỗi (Debug Report)
+
+## 1. Phân tích nguyên nhân lỗi (Root Cause Analysis)
+Trong đoạn mã cũ, lỗi logic xảy ra ở bên trong vòng lặp `for` dùng để kiểm tra trạng thái và tính tổng doanh thu. 
+
+**Dòng mã bị lỗi:**
+```c
+if (user_list[0].days_overdue <= 3) {
+    total_revenue += user_list[0].monthly_fee;
+    // ...
